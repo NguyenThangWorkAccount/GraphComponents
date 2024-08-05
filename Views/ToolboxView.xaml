@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="GraphComponents.Views.ToolboxView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ViewModels="clr-namespace:GraphComponents.ViewModels"
+             BorderBrush="Black"
+             BorderThickness="1">
+    <UserControl.DataContext>
+        <ViewModels:ToolboxViewModel />
+    </UserControl.DataContext>
+
+    <Grid Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TreeView x:Name="CommandsTreeView"
+                 Grid.Column="0"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 BorderThickness="0"
+                 Background="Transparent"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 Margin="5">
+        </TreeView>
+    </Grid>
+</UserControl>
